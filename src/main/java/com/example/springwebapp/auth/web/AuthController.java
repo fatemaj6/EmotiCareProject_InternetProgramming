@@ -1,10 +1,13 @@
 package com.example.springwebapp.auth.web;
 
-import com.example.springwebapp.auth.model.User;
-import com.example.springwebapp.auth.service.AuthService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.example.springwebapp.auth.service.AuthService;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
@@ -38,8 +41,12 @@ public class AuthController {
                     session.setAttribute("AUTH_USER_ID", user.getId());
                     session.setAttribute("AUTH_USER_EMAIL", user.getEmail());
                     session.setAttribute("AUTH_USER_ROLE", user.getRole());
-                    // Redirect ke home setelah login sukses
-                    return "redirect:/home"; 
+            if ("ADMIN".equals(user.getRole())) {
+                return "redirect:/admin/report";
+            } 
+            else {
+                return "redirect:/home";
+            }
                 })
                 .orElseGet(() -> {
                     model.addAttribute("error", "Invalid email or password");
