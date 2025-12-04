@@ -1,0 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<!DOCTYPE html><html><head><title>Learning Hub</title><link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/emoticare.css"><link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/learning-hub.css"></head>
+<body><div class="container"><h1>Learning Hub</h1><div class="resources-grid"><c:forEach var="resource" items="${resources}"><div class="resource-card"><h3>${resource.title}</h3><p>${resource.description}</p><button class="btn btn-primary">Learn</button></div></c:forEach></div></div></body></html>

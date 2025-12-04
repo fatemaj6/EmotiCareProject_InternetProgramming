@@ -1,0 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<!DOCTYPE html><html><head><title>Admin Dashboard</title><link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/emoticare.css"></head>
+<body><div class="container"><h1>Admin Dashboard</h1><div class="stats-grid"><div class="stat-card"><h3>Total Users: ${totalUsers}</h3></div><div class="stat-card"><h3>Active Users: ${activeUsers}</h3></div><div class="stat-card"><h3>Admins: ${adminUsers}</h3></div></div><h2>User List</h2><table border="1" style="width:100%"><tr><th>ID</th><th>Name</th><th>Email</th><th>Role</th></tr><c:forEach var="user" items="${users}"><tr><td>${user.userId}</td><td>${user.fullName}</td><td>${user.email}</td><td><c:if test="${user.admin}">Admin</c:if><c:if test="${!user.admin}">User</c:if></td></tr></c:forEach></table></div></body></html>

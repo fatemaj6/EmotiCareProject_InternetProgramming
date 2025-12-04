@@ -1,0 +1,3 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html><html><head><title>Self-Screening</title><link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/emoticare.css"></head>
+<body><div class="container"><h1>Mental Health Self-Screening</h1><form method="POST"><div class="form-group"><label>Assessment Type</label><select name="type" required><option>Anxiety</option><option>Stress</option><option>Depression</option></select></div><div class="form-group"><label>Score</label><input type="number" name="score" min="0" max="100" required></div><button type="submit" class="btn btn-primary">Submit</button></form></div></body></html>

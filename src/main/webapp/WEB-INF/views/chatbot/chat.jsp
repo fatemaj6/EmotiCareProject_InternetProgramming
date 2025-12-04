@@ -1,0 +1,3 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html><html><head><title>AI Chat</title><link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/emoticare.css"></head>
+<body><div class="container"><h1>AI Companion Chat</h1><div id="chatBox" style="border:1px solid #ccc;padding:15px;height:300px;overflow-y:auto;margin-bottom:10px;"><p>Hello! I'm your AI companion. How can I help?</p></div><form id="chatForm" method="POST"><input type="text" name="message" placeholder="Type your message..." required><button type="submit" class="btn btn-primary">Send</button></form></div></body></html>

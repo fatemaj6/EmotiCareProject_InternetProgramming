@@ -1,0 +1,3 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html><html><head><title>Screening Result</title><link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/emoticare.css"></head>
+<body><div class="container"><h1>Assessment Result</h1><div class="card"><p>Your assessment has been recorded. Thank you for sharing!</p><a href="${pageContext.request.contextPath}/dashboard.jsp" class="btn btn-primary">Back to Dashboard</a></div></div></body></html>

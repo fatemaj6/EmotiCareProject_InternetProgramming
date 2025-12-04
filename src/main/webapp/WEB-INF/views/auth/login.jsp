@@ -1,0 +1,3 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html><html><head><title>Login</title><link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/emoticare.css"><link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/auth.css"></head>
+<body class="auth-page"><div class="auth-container"><div class="auth-card"><h1>Sign In</h1><form method="POST"><div class="form-group"><label>Email</label><input type="email" name="email" required></div><div class="form-group"><label>Password</label><input type="password" name="password" required></div><button type="submit" class="btn btn-primary">Sign In</button></form></div></div></body></html>

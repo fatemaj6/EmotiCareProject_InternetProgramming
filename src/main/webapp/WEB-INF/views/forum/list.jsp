@@ -1,0 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<!DOCTYPE html><html><head><title>Forum</title><link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/emoticare.css"></head>
+<body><div class="container"><h1>Community Forum</h1><a href="${pageContext.request.contextPath}/forum/create" class="btn btn-primary">Create Post</a><div><c:forEach var="post" items="${posts}"><div class="card"><h3>${post.title}</h3><p>${post.content}</p><p>Likes: ${post.likes}</p></div></c:forEach></div></div></body></html>
